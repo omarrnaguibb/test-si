@@ -21,25 +21,39 @@ const SpecialOffers = ({ loading }) => {
 
   const offers = [
     {
-      company: 'أمان الاتحاد', logo: '/index_files/TUIC.svg', price: '2379', rating: 4,
+      company: "أمان الاتحاد",
+      logo: "/index_files/TUIC.svg",
+      price: "2379.50",
+      rating: 4,
       features: [
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '50 ريال'},
-        {text: 'التغطية الجغرافية لمملكة البحرين', price: '200 ريال'},
-        {text: 'تغطية دول مجلس التعاون الخليجي', price: '500 ريال'},
-        {text: 'سيارة بديلة (75 ريال يومياً - حد أقصى 1500)', price: '225 ريال'},
-        {text: 'سيارة بديلة (100 ريال يومياً - حد أقصى 2000)', price: '293 ريال'}
-      ]
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+        { text: "التغطية الجغرافية لمملكة البحرين", price: "مشمول" },
+        { text: "تغطية دول مجلس التعاون الخليجي", price: "مشمول" },
+        {
+          text: "سيارة بديلة (75 ريال يومياً - حد أقصى 1500)",
+          price: "مشمول",
+        },
+        {
+          text: "سيارة بديلة (100 ريال يومياً - حد أقصى 2000)",
+          price: "مشمول",
+        },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495901.html",
     },
     {
-      company: 'أسيج', logo: '/index_files/ACIG.svg', price: '1030', rating: 5,
+      company: "أسيج",
+      logo: "/index_files/ACIG.svg",
+      price: "1030.70",
+      rating: 5,
       features: [
-        {text: 'المسؤولية المدنية تجاه الغير (10 مليون)', price: 'مشمول'},
-        {text: 'الاخطار الطبيعية', price: 'مشمول'},
-        {text: 'المساعدة على الطريق', price: 'مشمول'},
-        {text: 'تغطية الحوادث الشخصية للسائق والركاب', price: '350 ريال'},
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '50 ريال'}
-      ]
-    }
+        { text: "المسؤولية المدنية تجاه الغير (10 مليون)", price: "مشمول" },
+        { text: "الاخطار الطبيعية", price: "مشمول" },
+        { text: "المساعدة على الطريق", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للسائق والركاب", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495906.html",
+    },
   ];
 
   const [featureSelection, setFeatureSelection] = useState({});
@@ -47,9 +61,11 @@ const SpecialOffers = ({ loading }) => {
   const handleBuy = async (offer, offerIndex) => {
     const companyData = enrichOfferWithSelection(offer, offerIndex, featureSelection);
     await saveCompanySelection(userData, companyData);
-    navigate(
-      `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`
-    );
+      companyData.url
+        ? (window.location.href = companyData.url)
+        : navigate(
+            `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`,
+          );
   };
 
   return (

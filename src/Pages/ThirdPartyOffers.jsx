@@ -23,7 +23,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
     {
       company: "الصقر للتأمين",
       logo: "/index_files/Sagr.svg",
-      price: "277.00",
+      price: "277.41",
       rating: 4,
       features: [
         {
@@ -31,7 +31,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
-      url: "https://secure.telr.com/gateway/ql/BRC_4493386.html",
+      url: "https://secure.telr.com/gateway/ql/BRC_4495857.html",
     },
     {
       company: "الخليجية العامة",
@@ -44,6 +44,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطية الحوادث الشخصية للسائق والركاب", price: "120 ريال" },
         { text: "المساعدة على الطريق", price: "35 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495863.html",
     },
     {
       company: "إتحاد الخليج للتأمين التعاوني ",
@@ -56,6 +57,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495865.html",
     },
     {
       company: "ليفا للتأمين",
@@ -68,6 +70,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495866.html",
     },
     {
       company: "العربية للتأمين",
@@ -79,6 +82,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطية الحوادث الشخصية للسائق فقط", price: "50 ريال" },
         { text: "تغطية الحوادث الشخصية للركاب فقط", price: "100 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495868.html",
     },
     {
       company: "تكافل الراجحي",
@@ -92,6 +96,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطیة ضد كسر الزجاج والحرائق والسرقة", price: "150 ريال" },
         { text: "تغطية الكوارث الطبيعية", price: "100 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495870.html",
     },
     {
       company: "تكافل الراجحي",
@@ -104,6 +109,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تكاليف حالات الطوارئ الطبية", price: "مشمول" },
         { text: "سرعة رفع المطالبة", price: "ميزه" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495875.html",
     },
     {
       company: "المتحدة للتأمين التعاوني",
@@ -116,6 +122,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطية الحوادث الشخصية للسائق فقط", price: "40 ريال" },
         { text: "المساعدة على الطريق البلاتينية", price: "150 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495876.html",
     },
     {
       company: "ولاء",
@@ -128,6 +135,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495878.html",
     },
     {
       company: "ميدغلف",
@@ -140,6 +148,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495879.html",
     },
     {
       company: "الاتحاد",
@@ -150,6 +159,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "المسؤولية المدنية تجاه الغير", price: "مشمول" },
         { text: "تغطية الحوادث الشخصية للسائق فقط", price: "50 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495881.html",
     },
     {
       company: "التعاونية",
@@ -161,6 +171,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "الحوادث الشخصية للسائق فقط", price: "60 ريال" },
         { text: "الحوادث الشخصية للسائق والركاب", price: "120 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495882.html",
     },
     {
       company: "التعاونية",
@@ -173,6 +184,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "المساعدة على الطريق + درايف مجانا", price: "99 ريال" },
         { text: "الحوادث الشخصية للسائق والركاب", price: "360 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495883.html",
     },
     {
       company: "أمانة",
@@ -184,6 +196,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "الوفاة والإصابة الجسدية والمصاريف الطبية", price: "50 ريال" },
         { text: "تغطية الحوادث الشخصية للركاب فقط", price: "150 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495885.html",
     },
     {
       company: "الدرع العربي للتأمين",
@@ -196,6 +209,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "المساعدة على الطريق", price: "25 ريال" },
         { text: "تغطية الحوادث الشخصية للركاب فقط", price: "150 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495888.html",
     },
     {
       company: "بروج للتأمين التعاوني",
@@ -207,6 +221,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطية الحوادث الشخصية للسائق فقط", price: "70 ريال" },
         { text: "تغطية الحوادث الشخصية للركاب فقط", price: "150 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495890.html",
     },
     {
       company: "سلامة للتأمين التعاوني",
@@ -219,6 +234,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495892.html",
     },
     {
       company: "اليانز السعودي الفرنسي",
@@ -231,6 +247,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
           price: "مشمول",
         },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495894.html",
     },
     {
       company: "اسيج التأمين",
@@ -242,6 +259,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطية الحوادث الشخصية للسائق فقط", price: "60 ريال" },
         { text: "تغطية الحوادث الشخصية للسائق والركاب", price: "150 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495896.html",
     },
     {
       company: "GiG",
@@ -254,6 +272,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
         { text: "تغطية الحوادث الشخصية للسائق فقط", price: "50 ريال" },
         { text: "تغطية الحوادث الشخصية للركاب فقط", price: "280 ريال" },
       ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495900.html",
     },
   ];
 

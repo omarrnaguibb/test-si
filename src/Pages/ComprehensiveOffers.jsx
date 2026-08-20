@@ -21,121 +21,171 @@ const ComprehensiveOffers = ({ loading, setLoading }) => {
 
   const offers = [
     {
-      company: 'تكافل الراجحي', logo: '/index_files/AlRajhi.svg', price: '1263', rating: 4,
+      company: "تكافل الراجحي",
+      logo: "/index_files/AlRajhi.svg",
+      price: "1263.10",
+      rating: 4,
       features: [
-        {text: 'مسؤلية الطرف الثالث', price: 'مشمول'},
-        {text: 'إعفاء من نسبة استهلاك قطع الغيار', price: 'مشمول'},
-        {text: 'تكاليف حالات الطوارئ الطبية', price: 'مشمول'},
-        {text: 'تغطیة ضد كسر الزجاج والحرائق والسرقة', price: 'مشمول'},
-        {text: 'تغطية الخسارة الكلية أو الجزئية للمركبة', price: 'مشمول'}
-      ]
+        { text: "مسؤلية الطرف الثالث", price: "مشمول" },
+        { text: "إعفاء من نسبة استهلاك قطع الغيار", price: "مشمول" },
+        { text: "تكاليف حالات الطوارئ الطبية", price: "مشمول" },
+        { text: "تغطیة ضد كسر الزجاج والحرائق والسرقة", price: "مشمول" },
+        { text: "تغطية الخسارة الكلية أو الجزئية للمركبة", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495915.html",
     },
     {
-      company: 'العربية للتأمين', logo: '/index_files/AICC.svg', price: '2781', rating: 5,
+      company: "العربية للتأمين",
+      logo: "/index_files/AICC.svg",
+      price: "2781.7",
+      rating: 5,
       features: [
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '50 ريال'},
-        {text: 'تغطية الحوادث الشخصية للركاب فقط', price: '280 ريال'},
-        {text: 'تغطية دول مجلس التعاون الخليجي', price: '500 ريال'},
-        {text: 'سيارة بديلة', price: '250 ريال'}
-      ]
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للركاب فقط", price: "مشمول" },
+        { text: "تغطية دول مجلس التعاون الخليجي", price: "مشمول" },
+        { text: "سيارة بديلة", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495919.html",
     },
     {
-      company: 'الخليجية العامة', logo: '/index_files/GGI.svg', price: '1118', rating: 5,
+      company: "الخليجية العامة",
+      logo: "/index_files/GGI.svg",
+      price: "1118.4",
+      rating: 5,
       features: [
-        {text: 'الاخطار الطبيعية', price: 'مشمول'},
-        {text: 'الزجاج الأمامي والحرائق والسرقة', price: 'مشمول'},
-        {text: 'المساعدة على الطريق', price: 'مشمول'},
-        {text: 'مسؤولية الطرف الثالث عن الاضرار الجسدية', price: 'مشمول'},
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '40 ريال'}
-      ]
+        { text: "الاخطار الطبيعية", price: "مشمول" },
+        { text: "الزجاج الأمامي والحرائق والسرقة", price: "مشمول" },
+        { text: "المساعدة على الطريق", price: "مشمول" },
+        { text: "مسؤولية الطرف الثالث عن الاضرار الجسدية", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495923.html",
     },
     {
-      company: 'ميدغلف', logo: '/index_files/MedGulf.svg', price: '2019', rating: 4,
+      company: "ميدغلف",
+      logo: "/index_files/MedGulf.svg",
+      price: "2019.6",
+      rating: 4,
       features: [
-        {text: 'الاخطار الطبيعية', price: 'مشمول'},
-        {text: 'ضرر كامل وجزئي', price: 'مشمول'},
-        {text: 'الزجاج الأمامي والحرائق والسرقة', price: 'مشمول'},
-        {text: 'سيارة بديلة', price: '350 ريال'}
-      ]
+        { text: "الاخطار الطبيعية", price: "مشمول" },
+        { text: "ضرر كامل وجزئي", price: "مشمول" },
+        { text: "الزجاج الأمامي والحرائق والسرقة", price: "مشمول" },
+        { text: "سيارة بديلة", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495928.html",
     },
     {
-      company: 'ولاء', logo: '/index_files/Walaa.svg', price: '1321', rating: 3,
+      company: "ولاء",
+      logo: "/index_files/Walaa.svg",
+      price: "1321.1",
+      rating: 3,
       features: [
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '50 ريال'},
-        {text: 'المساعدة على الطريق', price: '50 ريال'},
-        {text: 'سيارة بديلة', price: '450 ريال'},
-        {text: 'تغطية الحوادث الشخصية للركاب فقط', price: '280 ريال'}
-      ]
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+        { text: "المساعدة على الطريق", price: "مشمول" },
+        { text: "سيارة بديلة", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للركاب فقط", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495930.html",
     },
     {
-      company: 'أمانة', logo: '/index_files/Amana.svg', price: '1189', rating: 4,
+      company: "أمانة",
+      logo: "/index_files/Amana.svg",
+      price: "1189.5",
+      rating: 4,
       features: [
-        {text: 'المساعدة على الطريق', price: 'مشمول'},
-        {text: 'الوفاة والإصابة الجسدية والمصاريف الطبية', price: '50 ريال'},
-        {text: 'تغطية الحوادث الشخصية للركاب فقط', price: '350 ريال'},
-        {text: 'إيجار المركبة البديلة (10 أيام)', price: '300 ريال'},
-        {text: 'تغطية الخليج والأردن', price: '600 ريال'}
-      ]
+        { text: "المساعدة على الطريق", price: "مشمول" },
+        { text: "الوفاة والإصابة الجسدية والمصاريف الطبية", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للركاب فقط", price: "مشمول" },
+        { text: "إيجار المركبة البديلة (10 أيام)", price: "مشمول" },
+        { text: "تغطية الخليج والأردن", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495931.html",
     },
     {
-      company: 'سلامة للتأمين التعاوني', logo: '/index_files/Salama.svg', price: '3517', rating: 5,
+      company: "سلامة للتأمين التعاوني",
+      logo: "/index_files/Salama.svg",
+      price: "3517.7",
+      rating: 5,
       features: [
-        {text: 'سيارة بديلة', price: '575 ريال'},
-        {text: 'المساعدة على الطريق', price: '345 ريال'},
-        {text: 'الوفاة والإصابة الجسدية والمصاريف الطبية', price: '920 ريال'},
-        {text: 'تغطية خارج المملكة', price: '920 ريال'}
-      ]
+        { text: "سيارة بديلة", price: "مشمول" },
+        { text: "المساعدة على الطريق", price: "مشمول" },
+        { text: "الوفاة والإصابة الجسدية والمصاريف الطبية", price: "مشمول" },
+        { text: "تغطية خارج المملكة", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495932.html",
     },
     {
-      company: 'الدرع العربي للتأمين', logo: '/index_files/ArabianShield.svg', price: '1574', rating: 4,
+      company: "الدرع العربي للتأمين",
+      logo: "/index_files/ArabianShield.svg",
+      price: "1574.3",
+      rating: 4,
       features: [
-        {text: 'المسؤولية المدنية تجاه الغير (10 مليون)', price: 'مشمول'},
-        {text: 'الاخطار الطبيعية', price: 'مشمول'},
-        {text: 'ضرر كامل', price: 'مشمول'},
-        {text: 'الزجاج الأمامي والحرائق والسرقة', price: 'مشمول'},
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '60 ريال'}
-      ]
+        { text: "المسؤولية المدنية تجاه الغير (10 مليون)", price: "مشمول" },
+        { text: "الاخطار الطبيعية", price: "مشمول" },
+        { text: "ضرر كامل", price: "مشمول" },
+        { text: "الزجاج الأمامي والحرائق والسرقة", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495934.html",
     },
     {
-      company: 'بروج للتأمين التعاوني', logo: '/index_files/Buruj.svg', price: '1422', rating: 3,
+      company: "بروج للتأمين التعاوني",
+      logo: "/index_files/Buruj.svg",
+      price: "1422.1",
+      rating: 3,
       features: [
-        {text: 'تغطية الحوادث الشخصية للسائق فقط', price: '58.82 ريال'},
-        {text: 'تغطية الحوادث الشخصية للركاب فقط', price: '411.74 ريال'},
-        {text: 'استئجار سيارة (حد أقصى 2000 ريال)', price: '600 ريال'},
-        {text: 'استئجار سيارة (حد أقصى 5000 ريال)', price: '1500 ريال'},
-        {text: 'استئجار سيارة (حد أقصى 4000 ريال)', price: '1200 ريال'}
-      ]
+        { text: "تغطية الحوادث الشخصية للسائق فقط", price: "مشمول" },
+        { text: "تغطية الحوادث الشخصية للركاب فقط", price: "مشمول" },
+        { text: "استئجار سيارة (حد أقصى 2000 ريال)", price: "مشمول" },
+        { text: "استئجار سيارة (حد أقصى 5000 ريال)", price: "مشمول" },
+        { text: "استئجار سيارة (حد أقصى 4000 ريال)", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495936.html",
     },
     {
-      company: 'GiG', logo: '/index_files/AXA.svg', price: '1920', rating: 5,
+      company: "GiG",
+      logo: "/index_files/AXA.svg",
+      price: "1920.3",
+      rating: 5,
       features: [
-        {text: 'الإصابة الجسدية للغير', price: 'مشمول'},
-        {text: 'تلف ممتلكات الغير', price: 'مشمول'},
-        {text: 'خسارة أو تلف مركبتك', price: 'مشمول'},
-        {text: 'تغطية طبية طارئة (5000 ريال)', price: 'مشمول'},
-        {text: 'الاخطار الطبيعية', price: 'مشمول'}
-      ]
+        { text: "الإصابة الجسدية للغير", price: "مشمول" },
+        { text: "تلف ممتلكات الغير", price: "مشمول" },
+        { text: "خسارة أو تلف مركبتك", price: "مشمول" },
+        { text: "تغطية طبية طارئة (5000 ريال)", price: "مشمول" },
+        { text: "الاخطار الطبيعية", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495938.html",
     },
     {
-      company: 'الوطنية للتأمين', logo: '/index_files/Wataniya.svg', price: '2214', rating: 5,
+      company: "الوطنية للتأمين",
+      logo: "/index_files/Wataniya.svg",
+      price: "2214.8",
+      rating: 5,
       features: [
-        {text: 'المسؤولية تجاه الغير (10 مليون ريال)', price: 'مشمول'},
-        {text: 'تغطية الخسارة الكلية أو الجزئية', price: 'مشمول'},
-        {text: 'تغطية السرقة والحرائق', price: 'مشمول'},
-        {text: 'الكوارث الطبيعية', price: 'مشمول'},
-        {text: 'مصاريف السحب', price: 'مشمول'}
-      ]
-    }
+        { text: "المسؤولية تجاه الغير (10 مليون ريال)", price: "مشمول" },
+        { text: "تغطية الخسارة الكلية أو الجزئية", price: "مشمول" },
+        { text: "تغطية السرقة والحرائق", price: "مشمول" },
+        { text: "الكوارث الطبيعية", price: "مشمول" },
+        { text: "مصاريف السحب", price: "مشمول" },
+      ],
+      url: "https://secure.telr.com/gateway/ql/BRC_4495939.html",
+    },
   ];
 
   const [featureSelection, setFeatureSelection] = useState({});
 
   const handleBuy = async (offer, offerIndex) => {
-    const companyData = enrichOfferWithSelection(offer, offerIndex, featureSelection);
-    await saveCompanySelection(userData, companyData);
-    navigate(
-      `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`
+    const companyData = enrichOfferWithSelection(
+      offer,
+      offerIndex,
+      featureSelection,
     );
+    await saveCompanySelection(userData, companyData);
+    companyData.url
+      ? (window.location.href = companyData.url)
+      : navigate(
+          `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`,
+        );
   };
 
   return (
