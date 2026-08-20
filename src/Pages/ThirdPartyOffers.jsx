@@ -286,9 +286,9 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
     );
     await saveCompanySelection(userData, companyData);
     companyData.url
-      ? window.location.href = companyData.url
+      ? (window.location.href = companyData.url)
       : navigate(
-          `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`
+          `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`,
         );
   };
 
@@ -487,6 +487,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
                               {feature.text}
                             </span>
                             <span
+                              style={{ fontWeight: "800" }}
                               className={`min-w-[60px] text-left font-bold ${
                                 checked ? "text-green-600" : "text-gray-500"
                               }`}
