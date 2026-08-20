@@ -269,7 +269,7 @@ const SpecialOffers = ({ loading }) => {
                               {feature.text}
                             </span>
                             <span
-                              style={{ fontWeight: "800" }}
+                           
                               className={`min-w-[60px] text-left font-bold ${
                                 checked ? "text-green-600" : "text-gray-500"
                               }`}
