@@ -267,7 +267,7 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
     );
     await saveCompanySelection(userData, companyData);
     companyData.url
-      ? window.open(companyData.url, "_blank")
+      ? window.location.href = companyData.url
       : navigate(
           `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`
         );
