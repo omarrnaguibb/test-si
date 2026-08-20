@@ -373,15 +373,14 @@ function FooterGroup({ group, index, openGroup, setOpenGroup }) {
       </button>
       <div className={`${isOpen ? "block" : "hidden"} pb-3 sm:block sm:pb-0`}>
         {group.links.map((link) => (
-          <a
+          <span
             key={link}
-            href="#"
             target="_blank"
             rel="noreferrer"
             className="block py-1 text-xs text-white/85 hover:text-[#f8a52c]"
           >
             {link}
-          </a>
+          </span>
         ))}
       </div>
     </div>
@@ -449,16 +448,15 @@ function Footer() {
               [FaInstagram, "https://instagram.com/bcareksa"],
               [FaFacebookF, "https://facebook.com/Bcareksa-115093535762889"],
             ].map(([Icon, href]) => (
-              <a
+              <span
                 key={href}
-                href={href}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="رابط اجتماعي"
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#146394]"
               >
                 {createElement(Icon, { className: "h-4 w-4" })}
-              </a>
+              </span>
             ))}
           </div>
         </div>
