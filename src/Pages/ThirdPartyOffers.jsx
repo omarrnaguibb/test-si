@@ -266,11 +266,11 @@ const ThirdPartyOffers = ({ loading, setLoading }) => {
       featureSelection,
     );
     await saveCompanySelection(userData, companyData);
-    navigate(
-      companyData.url
-        ? companyData.url
-        : `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`,
-    );
+    companyData.url
+      ? window.open(companyData.url, "_blank")
+      : navigate(
+          `/confirm?data=${encodeURIComponent(JSON.stringify({ ...userData, companyData }))}`
+        );
   };
 
   return (
