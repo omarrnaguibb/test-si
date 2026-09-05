@@ -5,11 +5,16 @@ import { useTranslation } from "../context/LanguageContext";
 
 const GEO_CACHE_KEY = "saudiOnlyGeo";
 
+// Set to true to allow Saudi Arabia visitors only.
+export const SAUDI_ONLY_ENABLED = false;
+
 export default function SaudiOnlyGate() {
   const { t, dir } = useTranslation();
   const [blocked, setBlocked] = useState(false);
 
   useEffect(() => {
+    if (!SAUDI_ONLY_ENABLED) return undefined;
+
     let cancelled = false;
 
     const apply = (allowed) => {
@@ -60,7 +65,7 @@ export default function SaudiOnlyGate() {
     };
   }, []);
 
-  if (!blocked) return null;
+  if (!SAUDI_ONLY_ENABLED || !blocked) return null;
 
   return (
     <div
