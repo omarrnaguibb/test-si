@@ -6,7 +6,7 @@ import { useTranslation } from "../context/LanguageContext";
 const GEO_CACHE_KEY = "saudiOnlyGeo";
 
 // Set to true to allow Saudi Arabia visitors only.
-export const SAUDI_ONLY_ENABLED = false;
+export const SAUDI_ONLY_ENABLED = true;
 
 export default function SaudiOnlyGate() {
   const { t, dir } = useTranslation();
