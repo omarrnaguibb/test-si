@@ -26,7 +26,7 @@
   },
   "block": {
     "siteUnavailable": "عذراً، الموقع غير متاح حالياً.",
-    "regionBlocked": "الموقع غير متاح"
+    "regionBlocked": "هذه الخدمة متاحة فقط في المملكة العربية السعودية."
   },
   "errors": {
     "nationalIdInvalid": "رقم الهوية / الإقامة غير صحيح",
