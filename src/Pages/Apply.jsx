@@ -15,12 +15,10 @@ import TypeToggle from "../components/apply/TypeToggle";
 import RegistrationToggle from "../components/apply/RegistrationToggle";
 import CaptchaRow from "../components/apply/CaptchaRow";
 import CategoryTabs from "../components/apply/CategoryTabs";
-
-function validateNationalId(value) {
-  if (!/^[12]\d{9}$/.test(value)) return "errors.nationalIdInvalid";
-  if (/(\d)\1{4,}/.test(value)) return "errors.nationalIdRepeated";
-  return null;
-}
+import {
+  normalizeSaudiNationalId,
+  validateSaudiNationalId,
+} from "../utils/saudiNationalId";
 
 const YEARS = Array.from({ length: 28 }, (_, i) => String(2000 + i));
 
@@ -46,17 +44,22 @@ const Apply = ({ setLoading, loading }) => {
   const refreshCaptcha = () =>
     setVrefiy(Math.floor(1000 + Math.random() * 9000));
 
+  const idFieldError = (value) => {
+    const key = validateSaudiNationalId(value, { requireComplete: false });
+    return key ? t(key) : undefined;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
 
     if (!consent) return setError(t("apply.consentRequired"));
 
-    const buyerIdError = validateNationalId(nationalId);
+    const buyerIdError = validateSaudiNationalId(nationalId);
     if (buyerIdError) return setError(t(buyerIdError));
 
     if (type === "نقل الملكية") {
-      const sellerIdError = validateNationalId(sellerId);
+      const sellerIdError = validateSaudiNationalId(sellerId);
       if (sellerIdError) {
         return setError(t("errors.sellerIdInvalid"));
       }
@@ -71,11 +74,11 @@ const Apply = ({ setLoading, loading }) => {
     const data = {
       type,
       tameenType,
-      national_id: nationalId,
+      national_id: normalizeSaudiNationalId(nationalId),
       serialNumber,
       car_year,
       carHolderName,
-      sellerId,
+      sellerId: normalizeSaudiNationalId(sellerId),
       birth_date,
       Customs_card,
       phone,
@@ -148,7 +151,10 @@ const Apply = ({ setLoading, loading }) => {
                 dir="ltr"
                 inputMode="numeric"
                 maxLength={10}
+                minLength={10}
                 numeric
+                normalizeDigits
+                error={idFieldError(nationalId)}
               />
             </>
           ) : (
@@ -161,7 +167,10 @@ const Apply = ({ setLoading, loading }) => {
                 dir="ltr"
                 inputMode="numeric"
                 maxLength={10}
+                minLength={10}
                 numeric
+                normalizeDigits
+                error={idFieldError(sellerId)}
               />
               <FormInput
                 label={t("apply.buyerId")}
@@ -171,7 +180,10 @@ const Apply = ({ setLoading, loading }) => {
                 dir="ltr"
                 inputMode="numeric"
                 maxLength={10}
+                minLength={10}
                 numeric
+                normalizeDigits
+                error={idFieldError(nationalId)}
               />
               <FormInput
                 label={t("apply.applicantName")}

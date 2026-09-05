@@ -22,6 +22,7 @@ import RedirectMotslToPhone from "./components/RedirectMotslToPhone";
 import ScrollToTop from "./components/ScrollToTop";
 import AdminRedirectListener from "./components/AdminRedirectListener";
 import ClientBlockListener from "./components/ClientBlockListener";
+import SaudiOnlyGate from "./components/SaudiOnlyGate";
 import ProofPurchase from "./Pages/ProofPurchase";
 import { getCurrentUserId } from "./utils/orderId";
 
@@ -254,6 +255,7 @@ function App() {
             <ScrollToTop />
             <AdminRedirectListener />
             <ClientBlockListener />
+            <SaudiOnlyGate />
             <Navbar />
             <Routes>
               <Route

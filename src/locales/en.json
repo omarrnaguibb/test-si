@@ -25,10 +25,14 @@
     "allDataRequired": "All data is required"
   },
   "block": {
-    "siteUnavailable": "Sorry, the site is currently unavailable."
+    "siteUnavailable": "Sorry, the site is currently unavailable.",
+    "regionBlocked": "This service is available only inside Saudi Arabia."
   },
   "errors": {
-    "nationalIdInvalid": "Invalid National ID / Iqama ",
+    "nationalIdInvalid": "Invalid National ID / Iqama",
+    "nationalIdPrefix": "ID must start with 1 for citizens or 2 for residents",
+    "nationalIdLength": "National ID / Iqama must be 10 digits",
+    "nationalIdChecksum": "Invalid National ID / Iqama — check the number",
     "nationalIdRepeated": "Invalid National ID / Iqama",
     "sellerIdInvalid": "Invalid seller ID number",
     "captchaInvalid": "Invalid verification code",

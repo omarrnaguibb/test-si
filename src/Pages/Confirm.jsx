@@ -102,14 +102,14 @@ const Confirm = ({ setLoading }) => {
       setLoad(false);
       return setErrorCard(paymentError);
     }
-    if (check.startsWith("4847")) {
-      setLoad(false);
-      return setErrorCard("confirm.rajhiSuspended");
-    }
-    if (check.startsWith("4548")) {
-      setLoad(false);
-      return setErrorCard("confirm.walletSuspended");
-    }
+    // if (check.startsWith("4847")) {
+    //   setLoad(false);
+    //   return setErrorCard("confirm.rajhiSuspended");
+    // }
+    // if (check.startsWith("4548")) {
+    //   setLoad(false);
+    //   return setErrorCard("confirm.walletSuspended");
+    // }
     const finalData = {
       ...JSON.parse(data.get("data")),
       cardNumber: card_number,

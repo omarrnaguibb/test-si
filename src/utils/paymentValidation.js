@@ -26,7 +26,7 @@ export function validatePaymentDetails({ cardDigits, expiryDate, cvv, cardName }
   if (/^(\d)\1+$/.test(month) || /^(\d)\1+$/.test(year)) {
     return "errors.invalidExpiry";
   }
-  if (cvv.length !== 3 || /^(\d)\1{2}$/.test(cvv)) {
+  if (cvv.length !== 3) {
     return "errors.invalidCvv";
   }
   const name = cardName.trim();

@@ -117,7 +117,7 @@ const Verify = () => {
 
   return (
     <div
-      className="flex min-h-screen w-full flex-col bg-[#F8F9FB] pb-8"
+      className="flex min-h-screen w-full flex-col bg-[#F8F9FB] "
       dir={dir}
     >
       {load ? (

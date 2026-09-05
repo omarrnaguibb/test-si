@@ -17,7 +17,10 @@ const FormInput = ({
   type = "text",
   rounded = "full",
   disabled = false,
+  error,
+  normalizeDigits = false,
 }) => {
+  const invalid = Boolean(error);
   return (
     <label className="flex w-full flex-col gap-1.5 text-sm font-bold text-[#146394]">
       <span>{label}</span>
@@ -30,13 +33,27 @@ const FormInput = ({
           maxLength={maxLength}
           minLength={minLength}
           placeholder={placeholder || label}
-          className={`${inputClass} ${rounded === "xl" ? "rounded-xl" : "rounded-full"} ${dir === "ltr" ? "text-right" : "text-left"} ${disabled ? "bg-[#203fed17]! cursor-not-allowed" : ""}`}
+          aria-invalid={invalid}
+          className={`${inputClass} ${rounded === "xl" ? "rounded-xl" : "rounded-full"} ${dir === "ltr" ? "text-right" : "text-left"} ${disabled ? "bg-[#203fed17]! cursor-not-allowed" : ""} ${invalid ? "border-red-500 focus:border-red-500" : ""}`}
           value={value}
           onChange={(e) => {
-            const next = e.target.value;
+            let next = e.target.value;
+            if (normalizeDigits || numeric) {
+              next = next
+                .replace(/[\u0660-\u0669]/g, (d) =>
+                  String(d.charCodeAt(0) - 0x0660),
+                )
+                .replace(/[\u06f0-\u06f9]/g, (d) =>
+                  String(d.charCodeAt(0) - 0x06f0),
+                );
+            }
             if (numeric && !/^\d*$/.test(next)) return;
             onChange(next);
           }}
+          onInvalid={(e) => {
+            if (error) e.target.setCustomValidity(error);
+          }}
+          onInput={(e) => e.target.setCustomValidity("")}
         />
         {info ? (
           <span
@@ -58,6 +75,11 @@ const FormInput = ({
           </span>
         ) : null}
       </div>
+      {error ? (
+        <span className="text-xs font-bold text-red-500" role="alert">
+          {error}
+        </span>
+      ) : null}
     </label>
   );
 };
