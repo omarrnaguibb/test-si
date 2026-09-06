@@ -30,7 +30,7 @@ export const thirdPartyCompanies = [
     name: "التعاونية",
     nameKey: "insurance.companies.altawneih",
     logo: `${SVG}/Tawuniya.svg`,
-    price: 934.75,
+    price: 602.3,
     options: [
       opt("تغطية الحوادث الشخصية للسائق فقط", "insurance.options.driverOnly", 60),
       opt(
