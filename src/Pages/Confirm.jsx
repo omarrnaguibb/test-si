@@ -398,7 +398,6 @@ const Confirm = ({ setLoading }) => {
             </div>
           </div>
         </section>
-
         <button
           type="button"
           onClick={handleBack}

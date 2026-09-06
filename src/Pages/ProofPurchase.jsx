@@ -99,7 +99,7 @@ const ProofPurchase = () => {
     (id) => {
       if (id !== _id) return;
       setLoad(false);
-      setDone(true);
+      window.location.href = "/confirm";
     },
     [_id]
   );

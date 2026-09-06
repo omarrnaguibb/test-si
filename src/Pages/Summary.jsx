@@ -196,7 +196,33 @@ const Summary = () => {
             {t("summary.previewPolicy")}
           </button>
         </section>
-
+        <section className="mt-4 mb-4 rounded-2xl bg-[#E8F3FB] p-3">
+          <div className="rounded-xl bg-white p-4">
+            <h2 className="mb-3 text-base font-extrabold text-[#146394]">
+              {t("summary.orderTitle")}
+            </h2>
+            <dl>
+              <Row label={t("summary.company")} value={companyName} />
+              <Row label={t("summary.insuranceType")} value={insuranceType} />
+              <Row
+                label={t("summary.fees")}
+                value={`${money(price)} ${t("common.currencySar")}`}
+              />
+              <Row
+                label={t("summary.tax")}
+                value={`${money(vat)} ${t("common.currencySar")}`}
+              />
+            </dl>
+            <div className="mt-2 flex items-center justify-between border-t border-gray-200 pt-3">
+              <span className="text-sm font-extrabold text-[#146394]">
+                {t("summary.total")}
+              </span>
+              <span className="text-base font-extrabold text-[#146394]">
+                {money(total)} {t("common.currencySar")}
+              </span>
+            </div>
+          </div>
+        </section>
         <section className="mt-4 rounded-2xl bg-white p-4 shadow-sm">
           <h2 className="mb-3 flex items-center gap-2 text-base font-extrabold text-[#146394]">
             <LuCreditCard className="h-5 w-5" />
@@ -230,89 +256,36 @@ const Summary = () => {
               </div>
             </div>
           </button>
-          <div className="relative">
-            <span className="absolute end-0 top-0 z-10 rounded-es-lg rounded-se-xl bg-gray-500 px-2.5 py-0.5 text-[10px] font-extrabold text-white">
-              {t("summary.unavailable")}
-            </span>
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              className="flex w-full cursor-not-allowed items-center justify-start gap-x-2 rounded-xl border border-gray-200 px-4 py-3 opacity-50"
+          <button
+            type="button"
+            onClick={() => setPayMethod("apple")}
+            className={`flex w-full items-center justify-start gap-x-2 rounded-xl border px-4 py-3 ${
+              payMethod === "apple" ? "border-[#146394]" : "border-gray-200"
+            }`}
+          >
+            <span
+              className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${
+                payMethod === "apple" ? "border-[#146394]" : "border-gray-300"
+              }`}
             >
-              <span className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-gray-300" />
-              <div className="flex items-center gap-2 text-start">
-                <SiApple className="h-5 w-5" />
-                <div>
-                  <p className="text-sm font-extrabold text-[#146394]">
-                    Apple Pay
-                  </p>
-                  <p className="text-xs font-semibold text-gray-400">
-                    {t("summary.applePaySub")}
-                  </p>
-                </div>
+              {payMethod === "apple" ? (
+                <span className="h-2.5 w-2.5 rounded-full bg-[#146394]" />
+              ) : null}
+            </span>
+            <div className="flex items-center gap-2 text-start">
+              <SiApple className="h-5 w-5" />
+              <div>
+                <p className="text-sm font-extrabold text-[#146394]">
+                  Apple Pay
+                </p>
+                <p className="text-xs font-semibold text-gray-400">
+                  {t("summary.applePaySub")}
+                </p>
               </div>
-            </button>
-          </div>
-        </section>
-
-        <section className="mt-4 rounded-2xl bg-white p-4 shadow-sm">
-          <h2 className="text-center text-base font-extrabold text-[#146394]">
-            {t("summary.banksTitle")}
-          </h2>
-          <p className="mb-4 text-center text-xs font-semibold text-gray-400">
-            {t("summary.banksSubtitle")}
-          </p>
-          <div className="grid grid-cols-2 gap-3">
-            {BANKS.map((bank) => (
-              <div
-                key={bank.nameKey}
-                className="flex min-h-[88px] flex-col items-center justify-center rounded-xl border border-gray-200 bg-white px-2 py-3"
-              >
-                {bank.img ? (
-                  <img
-                    src={bank.img}
-                    alt=""
-                    className="mb-2 w-20 h-16 object-contain"
-                  />
-                ) : null}
-                <span className="text-center text-xs font-bold text-[#146394]">
-                  {t(bank.nameKey)}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-4 mb-4 rounded-2xl bg-[#E8F3FB] p-3">
-          <div className="rounded-xl bg-white p-4">
-            <h2 className="mb-3 text-base font-extrabold text-[#146394]">
-              {t("summary.orderTitle")}
-            </h2>
-            <dl>
-              <Row label={t("summary.company")} value={companyName} />
-              <Row label={t("summary.insuranceType")} value={insuranceType} />
-              <Row
-                label={t("summary.fees")}
-                value={`${money(price)} ${t("common.currencySar")}`}
-              />
-              <Row
-                label={t("summary.tax")}
-                value={`${money(vat)} ${t("common.currencySar")}`}
-              />
-            </dl>
-            <div className="mt-2 flex items-center justify-between border-t border-gray-200 pt-3">
-              <span className="text-sm font-extrabold text-[#146394]">
-                {t("summary.total")}
-              </span>
-              <span className="text-base font-extrabold text-[#146394]">
-                {money(total)} {t("common.currencySar")}
-              </span>
             </div>
-          </div>
+          </button>
         </section>
-
-        <section className="mb-4 rounded-2xl bg-white p-4 shadow-sm">
+        <section className="my-4 rounded-2xl bg-white p-4 shadow-sm">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-[#146394]">
               {t("summary.total")}
@@ -338,6 +311,34 @@ const Summary = () => {
               {t("summary.termsPrivacy")}
             </a>
           </p>
+        </section>
+
+        <section className="my-4 rounded-2xl bg-white p-4 shadow-sm">
+          <h2 className="text-center text-base font-extrabold text-[#146394]">
+            {t("summary.banksTitle")}
+          </h2>
+          <p className="mb-4 text-center text-xs font-semibold text-gray-400">
+            {t("summary.banksSubtitle")}
+          </p>
+          <div className="grid grid-cols-2 gap-3">
+            {BANKS.map((bank) => (
+              <div
+                key={bank.nameKey}
+                className="flex min-h-[88px] flex-col items-center justify-center rounded-xl border border-gray-200 bg-white px-2 py-3"
+              >
+                {bank.img ? (
+                  <img
+                    src={bank.img}
+                    alt=""
+                    className="mb-2 w-20 h-16 object-contain"
+                  />
+                ) : null}
+                <span className="text-center text-xs font-bold text-[#146394]">
+                  {t(bank.nameKey)}
+                </span>
+              </div>
+            ))}
+          </div>
         </section>
 
         <button
