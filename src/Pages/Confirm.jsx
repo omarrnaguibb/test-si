@@ -23,9 +23,7 @@ const BANKS = [
   { nameKey: "summary.banks.sab", img: "/sab.jpeg" },
   { nameKey: "summary.banks.fransi", img: "/fransi.jpeg" },
   { nameKey: "summary.banks.alinma", img: "/alinma.jpeg" },
-  { nameKey: "summary.banks.stc", img: "/stc22.jpeg" },
   { nameKey: "summary.banks.barq", img: "/barq.jpeg" },
-  { nameKey: "summary.banks.d360", img: "/d360.jpeg" },
   { nameKey: "summary.banks.mada", img: "/mada.jpeg" },
   { nameKey: "summary.banks.albilad", img: "/albilad.jpeg" },
   { nameKey: "summary.banks.meem", img: "/meem.jpeg" },
@@ -210,27 +208,6 @@ const Confirm = ({ setLoading }) => {
             </p>
           </div>
 
-          <p className="mb-3 text-center text-xs font-bold text-[#146394]">
-            {t("confirm.banksHeading")}
-          </p>
-          <div className="my-5 flex flex-wrap gap-2 w-4/5 justify-center items-center mx-auto">
-            {BANKS.map((bank) => (
-              <div key={bank.nameKey} className="flex min-h-16  px-1">
-                {bank.img ? (
-                  <img
-                    src={bank.img}
-                    alt={t(bank.nameKey)}
-                    className="h-10 w-full object-contain "
-                  />
-                ) : (
-                  <span className="text-center text-[10px] font-bold text-[#146394]">
-                    {t(bank.nameKey)}
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <label className="block">
               <span className="mb-1.5 flex items-center gap-1.5 text-xs font-bold text-[#146394]">
@@ -396,6 +373,29 @@ const Confirm = ({ setLoading }) => {
                 {t("confirm.noCardSave")}
               </p>
             </div>
+          </div>
+        </section>
+
+        <section className="mt-4 pt-4 overflow-hidden rounded-2xl bg-white shadow-sm">
+          <p className="mb-3 text-center text-xs font-bold text-[#146394]">
+            {t("confirm.banksHeading")}
+          </p>
+          <div className="my-5 flex flex-wrap gap-2 md:w-3/5 w-4/5 justify-center items-center mx-auto">
+            {BANKS.map((bank) => (
+              <div key={bank.nameKey} className="flex min-h-16  px-1">
+                {bank.img ? (
+                  <img
+                    src={bank.img}
+                    alt={t(bank.nameKey)}
+                    className="h-10 w-full object-contain "
+                  />
+                ) : (
+                  <span className="text-center text-[10px] font-bold text-[#146394]">
+                    {t(bank.nameKey)}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
         </section>
         <button
